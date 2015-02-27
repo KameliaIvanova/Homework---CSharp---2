@@ -1,0 +1,4 @@
+Compare 
+two 
+text 
+files.

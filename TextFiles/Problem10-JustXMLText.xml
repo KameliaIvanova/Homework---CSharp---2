@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0028)http://pastebin.com/Am7YFriN -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./[C#] ParseXml - Pastebin.com_files/measure.min.js"></script><script type="text/javascript" async="" src="./[C#] ParseXml - Pastebin.com_files/pastebin.min.js"></script>
+		
+		<title>[C#] ParseXml - Pastebin.com</title>
+		<link rel="shortcut icon" href="http://pastebin.com/favicon.ico">
+<link href="./[C#] ParseXml - Pastebin.com_files/csharp.css" rel="stylesheet" type="text/css">		<link href="./[C#] ParseXml - Pastebin.com_files/main_test.css" rel="stylesheet" type="text/css">
+				
+		<script type="text/javascript" async="" src="./[C#] ParseXml - Pastebin.com_files/ga.js"></script><script type="text/javascript" src="./[C#] ParseXml - Pastebin.com_files/jquery.js"></script>
+		<script type="text/javascript" src="./[C#] ParseXml - Pastebin.com_files/main_v1.js"></script>
+		<meta property="fb:app_id" content="231493360234820">
+		<meta property="og:title" content="[C#] ParseXml - Pastebin.com">
+		<meta property="og:type" content="article">
+	    <meta property="og:url" content="http://pastebin.com/Am7YFriN">
+	    <meta property="og:image" content="http://pastebin.com/i/fb2.jpg">
+	    <meta property="og:site_name" content="Pastebin">
+		<meta name="google-site-verification" content="jkUAIOE8owUXu8UXIhRLB9oHJsWBfOgJbZzncqHoF4A">
+		<link rel="canonical" href="./[C#] ParseXml - Pastebin.com_files/[C#] ParseXml - Pastebin.com.xml">
+				<!--[if SafMob]>
+			<style>body{-webkit-text-size-adjust:none;}</style>
+		<![endif]-->
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-58643-34']);
+		  _gaq.push(['_trackPageview']);
+			setTimeout("_gaq.push(['_trackEvent', '15_seconds', 'read'])", 15000);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</head>
+	<body>
+	<div id="super_frame">
+		<div id="logo" onclick="location.href=&#39;/&#39;" title="Create New Paste"></div>
+		<div id="header">
+			<div id="header_top">
+				<span class="span_left more">PASTEBIN</span><span class="span_left less"> &nbsp;|&nbsp; #1 paste tool since 2002</span><span class="min_max_span narrow_it" title="Change layout width"></span><span class="min_max_span wide_it" style="display:none" title="Change layout width"></span>				<ul class="top_menu">
+					<li class="no_border_li"><a href="http://pastebin.com/" accesskey="n">create new paste</a></li><li><a href="http://pastebin.com/tools">tools</a></li><li><a href="http://pastebin.com/api">api</a></li><li><a href="http://pastebin.com/archive">archive</a></li><li><a href="http://pastebin.com/faq">faq</a></li>
+				</ul>
+			</div>
+			<div id="header_middle">
+				<span class="span_left big"><a href="http://pastebin.com/">PASTEBIN</a></span> 
+				<a href="http://twitter.com/pastebin" target="_blank"><img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="i_tf" width="122" height="20" border="0"></a>	<iframe src="./[C#] ParseXml - Pastebin.com_files/like.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;margin:13px 0 0 10px;vertical-align:top" allowtransparency="true"></iframe>
+				<div id="header_middle_search">
+					<form class="search_form" name="search_form" method="get" action="http://pastebin.com/search" id="cse-search-box">
+					    <input type="hidden" name="cx" value="013305635491195529773:0ufpuq-fpt0">
+					    <input type="hidden" name="cof" value="FORID:10">
+					    <input type="hidden" name="ie" value="UTF-8">
+						<input class="search_input" type="text" name="q" size="5" value="" placeholder="search..." x-webkit-speech=""><input name="sa" class="search_button" src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="Search..." type="image" value="Search">
+					</form>
+				</div>					
+			</div>
+			<div id="header_bottom">
+				<div class="div_top_menu">
+					<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" class="i_n" width="16" height="16" alt="" border="0"> <a href="http://pastebin.com/">create new paste</a> 
+					&nbsp;&nbsp;&nbsp; <img src="./[C#] ParseXml - Pastebin.com_files/t.gif" class="i_t" width="16" height="16" alt="" border="0"> <a href="http://pastebin.com/trends">trending pastes</a>
+				</div>
+				<ul class="top_menu">
+					<li class="no_border_li"><a href="http://pastebin.com/signup">sign up</a></li><li><a href="http://pastebin.com/login">login</a></li><li><a href="http://pastebin.com/alerts">my alerts</a></li><li><a href="http://pastebin.com/settings">my settings</a></li><li><a href="http://pastebin.com/profile">my profile</a></li>				</ul>		
+			</div>			
+		</div>
+
+			<div class="frame_spacer"><!-- --></div>
+			<div style="height:35px;line-height:35px;font-size:0.85em;"><img src="./[C#] ParseXml - Pastebin.com_files/tip.png" width="16" height="16" style="vertical-align:middle;margin:-6px 0 0 2px" alt=""> Pastebin launched a little side project called <a href="http://veryviral.com/" target="_blank">VERYVIRAL.com</a>, check it out ;-) <span style="float:right;text-align:right;">Want more features on Pastebin? <a href="http://pastebin.com/signup"><b>Sign Up</b></a>, it's FREE!</span></div>
+		<div class="frame_spacer"><!-- --></div>
+		<div id="monster_frame">
+			<div id="content_frame">
+				<div id="content_right">
+															<div class="content_right_menu">
+									<div class="content_right_title"><a href="http://pastebin.com/archive">Public Pastes</a></div>	
+									<div id="menu_2">
+										<ul class="right_menu"><li><a href="http://pastebin.com/0VSv2daC">Untitled</a><span>1 sec ago</span></li><li><a href="http://pastebin.com/tqXypg4y">Untitled</a><span>8 sec ago</span></li><li><a href="http://pastebin.com/xz3RM0an">Untitled</a><span>9 sec ago</span></li><li><a href="http://pastebin.com/fswYQTwt">Untitled</a><span>10 sec ago</span></li><li><a href="http://pastebin.com/RudhzVCK">Untitled</a><span>22 sec ago</span></li><li><a href="http://pastebin.com/LWMLsmL4">Untitled</a><span>19 sec ago</span></li><li><a href="http://pastebin.com/AT4kpngd">Untitled</a><span>31 sec ago</span></li><li><a href="http://pastebin.com/aN578jMW">Untitled</a><span>35 sec ago</span></li></ul></div></div>					
+				<div style="padding: 0; width:160px;margin: 10px 0;clear:left;">
+					<script type="text/javascript"><!--
+						e9 = new Object();
+					    e9.size = "160x600,120x600";
+					//--></script>
+					<script type="text/javascript" src="./[C#] ParseXml - Pastebin.com_files/tags.js"></script><div align="center"><iframe src="./[C#] ParseXml - Pastebin.com_files/[C#] ParseXml - Pastebin.com.xml" id="tfasyncframe_1" marginwidth="0" align="center" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowtransparency="true" width="160" height="600"> </iframe></div>
+				</div>					<div id="steadfast" title="Pastebin is proudly hosted by Steadfast.net" onclick="location.href=&#39;http://steadfast.net/?utm_source=pastebin.com&amp;utm_medium=referral&amp;utm_content=hosting_by_banner&amp;utm_campaign=referral_20140118_x_x_pastebin_partner&amp;source=referral_20140118_x_x_pastebin_partner&#39;"></div>
+				</div>
+				<div id="content_left">
+
+	<div class="paste_box_frame">
+		<div class="tweet">
+
+
+			<div onclick="facebookpopup(&#39;/Am7YFriN&#39;); return false;" id="b_facebook2"><span id="b_facebook">0</span></div>
+			<div onclick="twitpopup(&#39;/Am7YFriN&#39;); return false;" id="b_twitter2"><span id="b_twitter">0</span></div>
+
+		</div>
+		<div class="paste_box_icon">
+			<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" class="i_gb" alt="Guest" border="0">	
+		</div>
+		<div class="paste_box_info">
+			<div class="paste_box_line1" title="ParseXml"><img src="./[C#] ParseXml - Pastebin.com_files/t.gif" class="i_p0" width="16" height="16" title="Public paste, everybody can see this paste." alt="" border="0"><h1>ParseXml</h1> </div>
+			<div class="paste_box_line2">By: <a href="http://pastebin.com/u/stoskov">stoskov</a>  on <span title="Friday 25th of January 2013 07:36:29 AM CDT" style="cursor:help;border-bottom: 1px dotted;">Jan 25th, 2013</span> &nbsp;|&nbsp; syntax: <a href="http://pastebin.com/archive/csharp">C#</a> &nbsp;|&nbsp; size: 1.40 KB &nbsp;|&nbsp; views: <span title="Number of unique visitors to this paste" style="cursor:help;border-bottom: 1px dotted;">325</span> &nbsp;|&nbsp; expires: Never</div>
+			<div class="paste_box_line3"><a href="http://pastebin.com/download.php?i=Am7YFriN" rel="nofollow">download</a> &nbsp;|&nbsp; <a href="http://pastebin.com/raw.php?i=Am7YFriN" target="_blank" rel="nofollow">raw</a> &nbsp;|&nbsp; <a href="http://pastebin.com/embed.php?i=Am7YFriN" rel="nofollow">embed</a> &nbsp;|&nbsp; <a href="http://pastebin.com/report.php?i=Am7YFriN" rel="nofollow">report abuse</a> &nbsp;|&nbsp; <a href="http://pastebin.com/print.php?i=Am7YFriN" rel="nofollow">print</a></div>
+		</div>
+	</div>
+	
+				<div class="banner_728">
+					<script type="text/javascript"><!--
+						e9 = new Object();
+					    e9.size = "728x90";
+					//--></script>
+					<script type="text/javascript" src="./[C#] ParseXml - Pastebin.com_files/tags.js"></script><div align="center"><iframe src="./[C#] ParseXml - Pastebin.com_files/[C#] ParseXml - Pastebin.com.xml" id="tfasyncframe_2" marginwidth="0" align="center" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowtransparency="true" width="728" height="90"> </iframe></div>
+					<div id="5e2e4b27a0" class="pagefair-acceptable"></div>
+				</div>
+				<div class="layout_clear"></div><div id="code_frame2">
+	<div id="code_frame">
+		<div id="code_buttons">
+		
+		<a href="javascript:togglev();" title="Show/Hide line numbers"><img src="./[C#] ParseXml - Pastebin.com_files/t.gif" border="0" alt="" class="i16 line"></a> 
+		<a href="javascript:togglew('csharp');" title="Toggle text wrapping"><img src="./[C#] ParseXml - Pastebin.com_files/t.gif" border="0" alt="" class="i16 wrap"></a> 
+		<a href="http://pastebin.com/Am7YFriN#" class="copyme" onclick="selectText(&#39;selectable&#39;);showdiv(&#39;copied&#39;);" title="Copy text to clipboard"><img src="./[C#] ParseXml - Pastebin.com_files/t.gif" border="0" alt="" class="i16 clipboard"></a> <span id="copied">Text below is selected. Please press Ctrl+C to copy to your clipboard. (?+C on Mac)</span>
+
+		</div>
+		<div id="selectable">		
+		<div class="csharp"><ol><li class="li1"><div class="de1"><span class="kw1">using</span> <span class="co3">System</span><span class="sy0">;</span></div></li>
+<li class="li2"><div class="de2"><span class="kw1">using</span> <span class="co3">System.IO</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1"><span class="kw1">using</span> <span class="co3">System.Text</span><span class="sy0">;</span></div></li>
+<li class="li2"><div class="de2"><span class="kw1">using</span> <span class="co3">System.Xml</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1">&nbsp;</div></li>
+<li class="li2"><div class="de2"><span class="kw1">namespace</span> EX12ParseXml</div></li>
+<li class="li1"><div class="de1"><span class="br0">{</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">class</span> EX12ParseXml</div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">static</span> <span class="kw4">void</span> Main<span class="br0">(</span><span class="br0">)</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">string</span> fileSourcePath <span class="sy0">=</span> <span class="st0">"test.xml"</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">string</span> fileResultPath <span class="sy0">=</span> <span class="st0">"result.txt"</span><span class="sy0">;</span></div></li>
+<li class="li2"><div class="de2">&nbsp;</div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">using</span> <span class="br0">(</span>XmlReader reader <span class="sy0">=</span> XmlReader<span class="sy0">.</span><span class="me1">Create</span><span class="br0">(</span><span class="kw3">new</span> StreamReader<span class="br0">(</span>fileSourcePath, Encoding<span class="sy0">.</span><span class="me1">GetEncoding</span><span class="br0">(</span><span class="st0">"utf-8"</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">while</span> <span class="br0">(</span><span class="sy0">!</span>reader<span class="sy0">.</span><span class="me1">EOF</span><span class="br0">)</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">using</span> <span class="br0">(</span>StreamWriter writer <span class="sy0">=</span> <span class="kw3">new</span> StreamWriter<span class="br0">(</span>fileResultPath, <span class="kw1">false</span>, Encoding<span class="sy0">.</span><span class="me1">GetEncoding</span><span class="br0">(</span><span class="st0">"utf-8"</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">while</span> <span class="br0">(</span><span class="sy0">!</span>reader<span class="sy0">.</span><span class="me1">EOF</span><span class="br0">)</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reader<span class="sy0">.</span><span class="me1">Read</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>reader<span class="sy0">.</span><span class="me1">NodeType</span> <span class="sy0">==</span> XmlNodeType<span class="sy0">.</span><span class="me1">Text</span><span class="br0">)</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; writer<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span>reader<span class="sy0">.</span><span class="kw1">Value</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">catch</span> <span class="br0">(</span>IOException ex<span class="br0">)</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"io operation error!"</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span>ex<span class="sy0">.</span><span class="me1">Message</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">catch</span> <span class="br0">(</span>ArgumentException ex<span class="br0">)</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"error while trying to parse xml!"</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span>ex<span class="sy0">.</span><span class="me1">Message</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">catch</span> <span class="br0">(</span>FormatException ex<span class="br0">)</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"error while trying to parse xml!"</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span>ex<span class="sy0">.</span><span class="me1">Message</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">catch</span> <span class="br0">(</span>InvalidOperationException ex<span class="br0">)</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"error while trying to parse xml!"</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span>ex<span class="sy0">.</span><span class="me1">Message</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">catch</span> <span class="br0">(</span>XmlException ex<span class="br0">)</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"error while trying to parse xml!"</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span>ex<span class="sy0">.</span><span class="me1">Message</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li2"><div class="de2"><span class="br0">}</span></div></li>
+</ol></div>
+		</div>
+	</div></div>
+	<div class="content_title">
+		<span class="span_right raw_links"><a href="http://pastebin.com/index/Am7YFriN" rel="nofollow">create a <u>new version</u> of this paste</a></span>
+		RAW Paste Data
+	</div>
+	<form class="paste_form" id="myform" method="post" action="http://pastebin.com/post.php">
+		<div class="textarea_border">
+			<textarea id="paste_code" class="paste_code" name="paste_code" onkeydown="return catchTab(this,event)" style="resize: none; height: 250px;">using System;
+using System.IO;
+using System.Text;
+using System.Xml;
+
+namespace EX12ParseXml
+{
+	class EX12ParseXml
+	{
+		static void Main()
+		{
+			string fileSourcePath = "test.xml";
+			string fileResultPath = "result.txt";
+
+			try
+			{
+				using (XmlReader reader = XmlReader.Create(new StreamReader(fileSourcePath, Encoding.GetEncoding("utf-8"))))
+				{
+					while (!reader.EOF)
+					{
+						using (StreamWriter writer = new StreamWriter(fileResultPath, false, Encoding.GetEncoding("utf-8")))
+						{
+							while (!reader.EOF)
+							{
+								reader.Read();
+								if (reader.NodeType == XmlNodeType.Text)
+								{
+									writer.WriteLine(reader.Value);
+								}
+							}
+						}
+					}
+				}
+			}
+			catch (IOException ex)
+			{
+				Console.WriteLine("io operation error!");
+				Console.WriteLine(ex.Message);
+			}
+			catch (ArgumentException ex)
+			{
+				Console.WriteLine("error while trying to parse xml!");
+				Console.WriteLine(ex.Message);
+			}
+			catch (FormatException ex)
+			{
+				Console.WriteLine("error while trying to parse xml!");
+				Console.WriteLine(ex.Message);
+			}
+			catch (InvalidOperationException ex)
+			{
+				Console.WriteLine("error while trying to parse xml!");
+				Console.WriteLine(ex.Message);
+			}
+			catch (XmlException ex)
+			{
+				Console.WriteLine("error while trying to parse xml!");
+				Console.WriteLine(ex.Message);
+			}
+		}
+	}
+}</textarea>
+		</div>			
+	</form>
+
+
+	<script type="text/javascript" language="javascript">
+	$(document).ready(function(){
+	$('textarea').autoResize({minHeight: 80,maxHeight: 250});
+	geturl = "http://pastebin.com/Am7YFriN";
+		$.getJSON("http://graph.facebook.com/fql?q=SELECT total_count FROM link_stat WHERE url='http://pastebin.com/Am7YFriN'",
+	function(data) {
+	$('#b_facebook').append(data.data[0].total_count);
+	}); 
+	$.getJSON('http://urls.api.twitter.com/1/urls/count.json?url='+geturl+'&callback=?',
+	function(data) {
+	$('#b_twitter').append(data.count);
+	});
+	})
+    </script>
+				<div style="padding: 0;">
+					<script type="text/javascript"><!--
+						e9 = new Object();
+					    e9.size = "300x250,300x600";
+					//--></script>
+					<script type="text/javascript" src="./[C#] ParseXml - Pastebin.com_files/tags.js"></script><div align="center"><iframe src="./[C#] ParseXml - Pastebin.com_files/[C#] ParseXml - Pastebin.com.xml" id="tfasyncframe_3" marginwidth="0" align="center" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowtransparency="true" width="300" height="250"> </iframe></div>
+				</div>						<div style="margin:10px 0;clear:left"></div>
+					</div>
+					<div class="frame_spacer"><!-- --></div>
+					<div id="footer_top" style="clear:both">	
+						<div class="footer_top_title">Pastebin.com Tools &amp; Applications</div>
+						<div class="footer_top_text">
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 iphone"><a href="http://pastebin.com/tools#iphone">iPhone/iPad</a>
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 windows"><a href="http://pastebin.com/tools#windows">Windows</a>
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 firefox"><a href="http://pastebin.com/tools#firefox">Firefox</a>
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 chrome"><a href="http://pastebin.com/tools#chrome">Chrome</a>
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 webos"><a href="http://pastebin.com/tools#webos">WebOS</a>
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 android"><a href="http://pastebin.com/tools#android">Android</a>
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 macos"><a href="http://pastebin.com/tools#macos">Mac</a>
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 opera"><a href="http://pastebin.com/tools#opera">Opera</a>
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 clickto"><a href="http://pastebin.com/tools#clickto">Click.to</a>
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 unix"><a href="http://pastebin.com/tools#pastebincl">UNIX</a>
+							<img src="./[C#] ParseXml - Pastebin.com_files/t.gif" alt="" class="icon24 windowsphone"><a href="http://pastebin.com/tools#windowsphone">WinPhone</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="logo_small"></div>
+			<div id="footer_links">
+				<a href="http://pastebin.com/">create new paste</a> &nbsp;|&nbsp; <a href="http://pastebin.com/api">api</a> &nbsp;|&nbsp; <a href="http://pastebin.com/trends">trends</a> &nbsp;|&nbsp; <a href="http://pastebin.com/users">users</a> &nbsp;|&nbsp; <a href="http://pastebin.com/faq">faq</a> &nbsp;|&nbsp; <a href="http://pastebin.com/tools">tools</a> &nbsp;|&nbsp; <a href="http://pastebin.com/privacy">privacy</a> &nbsp;|&nbsp; <a href="http://pastebin.com/cookies_policy">cookies policy</a> &nbsp;|&nbsp; <a href="http://pastebin.com/contact">contact</a> &nbsp;|&nbsp; <a href="http://pastebin.com/dmca">dmca</a> &nbsp;|&nbsp; <a href="http://pastebin.com/stats">stats</a> &nbsp;|&nbsp; <a href="http://pastebin.com/advertising.php" target="_blank" rel="nofollow">advertise on pastebin</a> &nbsp;|&nbsp; <a href="http://pastebin.com/pro">go pro</a> 
+				<br>Follow us: <a href="http://www.facebook.com/pages/Pastebincom/150549571626327" target="_blank">pastebin on facebook</a> &nbsp;|&nbsp; <a href="http://twitter.com/#!/pastebin" target="blank">pastebin on twitter</a> &nbsp;|&nbsp; <a href="https://www.google.com/search?gl=us&pz=1&cf=all&ned=us&hl=en&tbm=nws&as_oq=pastebin&as_occt=any&as_qdr=d&authuser=0" target="_blank">pastebin in the news</a>
+				<br><a href="http://steadfast.net/services/dedicated-servers.php?utm_source=pastebin.com&utm_medium=referral&utm_content=footer_link_dedicated_server_hosting_by&utm_campaign=referral_20140118_x_x_pastebin_partner&source=referral_20140118_x_x_pastebin_partner" rel="nofollow" target="_blank">Dedicated Server Hosting</a> by <a href="http://steadfast.net/?utm_source=pastebin.com&utm_medium=referral&utm_content=footer_link_steadfast&utm_campaign=referral_20140118_x_x_pastebin_partner&source=referral_20140118_x_x_pastebin_partner" rel="nofollow" target="_blank">Steadfast</a><br>Pastebin v3.11 rendered in: 0.012 seconds				
+			</div>
+			<div id="footer_right">&nbsp;</div>
+		</div>
+		<script type="text/javascript">
+		$('.narrow_it').click(function(){
+		    $('#super_frame').animate({width:'100%'}, 500);
+		    $('#footer').animate({width:'100%'}, 500);
+			$(".narrow_it").hide();
+			$(".wide_it").show();
+			$.get('/layout.php', function(data) {
+			});
+		});
+		$('.wide_it').click(function(){
+		    $('#super_frame').animate({width:'1200px'}, 500);
+		    $('#footer').animate({width:'1200px'}, 500);
+			$(".wide_it").hide();
+			$(".narrow_it").show();
+			$.get('/layout.php', function(data) {
+			});
+		});
+		</script>
+
+
+					<script type="text/javascript"><!--
+					  e9 = new Object();
+					  e9.snackbar = true;
+					//--></script>
+					<script type="text/javascript" src="./[C#] ParseXml - Pastebin.com_files/tags.js"></script><div align="center"><iframe src="./[C#] ParseXml - Pastebin.com_files/[C#] ParseXml - Pastebin.com.xml" id="tfasyncframe_4" marginwidth="0" align="center" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowtransparency="true" width="468" height="60"> </iframe></div>
+
+
+<script type="text/javascript">
+    (function() {
+        function async_load(script_url){
+            var protocol = ('https:' == document.location.protocol ? 'https://' : 'http://');
+            var s = document.createElement('script'); s.src = protocol + script_url;
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        }
+        bm_website_code = '2D20BDFEA765412B';
+        jQuery(document).ready(function(){async_load('asset.pagefair.com/measure.min.js')});
+    })();
+</script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        var srw = document.createElement('script');
+        srw.type = 'text/javascript';
+        srw.async = true;
+        srw.src = 'http://s3.amazonaws.com/po93jnd9j40w/pastebin.min.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(srw, s.nextSibling);
+    });
+</script>
+                        
+                        
+	
+<arclones><textarea class="paste_code ar1407052015199" onkeydown="return catchTab(this,event)" style="resize: none; overflow: hidden; line-height: 21px; text-decoration: none; letter-spacing: 0px; font-size: 12px; font-family: Consolas, Menlo, Monaco, &#39;Lucida Console&#39;, &#39;Liberation Mono&#39;, &#39;DejaVu Sans Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, monospace, serif; font-style: normal; font-weight: 400; text-transform: none; text-align: start; direction: ltr; word-spacing: 0px; padding: 9.828125px; width: 964.34375px; position: absolute; top: -9999px; left: -9999px; opacity: 0; height: 0px;" tabindex="-1">using System;
+using System.IO;
+using System.Text;
+using System.Xml;
+
+namespace EX12ParseXml
+{
+	class EX12ParseXml
+	{
+		static void Main()
+		{
+			string fileSourcePath = "test.xml";
+			string fileResultPath = "result.txt";
+
+			try
+			{
+				using (XmlReader reader = XmlReader.Create(new StreamReader(fileSourcePath, Encoding.GetEncoding("utf-8"))))
+				{
+					while (!reader.EOF)
+					{
+						using (StreamWriter writer = new StreamWriter(fileResultPath, false, Encoding.GetEncoding("utf-8")))
+						{
+							while (!reader.EOF)
+							{
+								reader.Read();
+								if (reader.NodeType == XmlNodeType.Text)
+								{
+									writer.WriteLine(reader.Value);
+								}
+							}
+						}
+					}
+				}
+		
